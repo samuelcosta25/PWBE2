@@ -2,6 +2,12 @@
     "configurations": [
         {
             "type": "java",
+            "name": "EscolaCompletoApplication",
+            "request": "launch",
+            "mainClass": "webapp.escola_completo.EscolaCompletoApplication"
+        },
+        {
+            "type": "java",
             "name": "Spring Boot-CrudEscolaApplication<crud_escola>",
             "request": "launch",
             "cwd": "${workspaceFolder}",
