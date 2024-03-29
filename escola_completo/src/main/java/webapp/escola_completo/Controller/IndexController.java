@@ -1,24 +1,34 @@
 package webapp.escola_completo.Controller;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
+
 
 @Controller
 public class IndexController {
-    //Classe para a criacao das rotas de navegação
-    @GetMapping ("/home")
-    public String acessoHomePage(){
+    //classe para criação das rotas de navegação
+
+    @GetMapping("/home")
+    public ModelAndView acessoHomePage() {
+        ModelAndView mv = new ModelAndView("index");
+        return mv;
+    }
+    @GetMapping("")
+    public String acessoHomePage2() {
         return "index";
     }
-
-      @GetMapping("/login-adm")
+    @GetMapping("/login-adm")
     public String acessoLoginAdm() {
         return "login/login-adm";
     }
-
     @GetMapping("/cadastro-adm")
     public String acessoCadastroAdm() {
         return "cadastro/cadastro-adm";
     }
-
-
+    
+    
+    
+    
 }

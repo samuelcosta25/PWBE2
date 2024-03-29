@@ -36,11 +36,9 @@ body {
     transition: background-color 0.3s;
 }
 .btn-register:hover {
-    background-color: #e2e2e2;
-    color: rgb(41, 41, 41);
+    background-color: #555;
 }
-
-form a {
+form a{
     text-decoration: none;
+    color: #333;
 }
- 
