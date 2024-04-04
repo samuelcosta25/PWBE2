@@ -1,0 +1,11 @@
+Acesso ADM:
+- Fazer a matrícula do aluno (pagina interna ADM):
+  - cadastrar aluno
+  - disciplinas
+
+- Cadastrar o  professor:
+  - disciplina(somente 1)
+  - ao acessar disciplina, visualizar todos os alunos cadastrados
+
+
+Aonde parei: Verificar condições no AdministradorController para autentificação do cadastro mediante tabela de pré cadastro: está rodando porem redireionando para "acesso-adm"

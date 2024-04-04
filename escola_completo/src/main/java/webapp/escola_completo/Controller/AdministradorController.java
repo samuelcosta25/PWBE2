@@ -4,8 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
-
-
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import webapp.escola_completo.Model.Administrador;
 import webapp.escola_completo.Repository.AdministradorRepository;
@@ -53,7 +52,7 @@ boolean acessoInternoAdm = false;
 
     @PostMapping("acesso-adm")
     public ModelAndView acessoAdmLogin(@RequestParam String cpf,
-                                       @RequestParam String senha) {
+                                       @RequestParam String senha, RedirectAttributes redirectAttributes) {
         ModelAndView mv =  new ModelAndView("interna/interna-adm");//página interna de acesso
         
         boolean acessoCPF = cpf.equals(ar.findByCpf(cpf).getCpf());
@@ -64,11 +63,13 @@ boolean acessoInternoAdm = false;
             acessoInternoAdm = true;
             mv.addObject("msg", mensagem);
             mv.addObject("classe", "verde");
+            mv.setViewName("redirect:/interna/interna-adm");
         }else{
             String mensagem = "Login Não Efetuado";
             System.out.println(mensagem);
             mv.addObject("msg", mensagem);
             mv.addObject("classe", "vermelho");
+            mv.setViewName("redirect:/login/login-adm");
         }
         return mv;
     }
