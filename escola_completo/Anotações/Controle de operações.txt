@@ -1,0 +1,4 @@
+-Terminar acesso do Adm, pagina interna e controles de acesso que ser permitido pelo adm;
+-Interna adm, metodo
+
+-Fazer todas as funcionalidades(MVC) do Aluno e professor.
