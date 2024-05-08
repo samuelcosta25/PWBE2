@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "EscolaSpringApplication",
+            "request": "launch",
+            "mainClass": "com.webapp.escola_spring.EscolaSpringApplication",
+            "projectName": "escola_completo"
+        },
+        {
+            "type": "java",
             "name": "EscolaCompletoApplication",
             "request": "launch",
             "mainClass": "webapp.escola_completo.EscolaCompletoApplication"
