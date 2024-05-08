@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtro de Docentes</title>
+    <link rel="stylesheet" th:href="@{css/style.css}">
+    <link rel="stylesheet" th:href="@{css/filtro-alunos.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div th:insert="~{fragmentos/header :: header}"></div>
+    <h1>Docentes da sua Matéria</h1>
+    <div class="container">
+        <table class="center-table">
+            <thead>
+                <tr>
+                    <th>Email</th>
+                    <th>Nome</th>
+                    <th>Turma</th>
+                    <th>Matéria</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="docente : ${docentes}">
+                    <th:block th:if="${docente.turmas == aluno.turma}">
+                        <td th:text="${docente.emailInstitucional}"></td>
+                        <td th:text="${docente.nome}"></td>
+                        <td th:text="${docente.turmas}"></td>
+                        <td th:text="${docente.materia}"></td>
+                    </th:block>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div th:insert="~{fragmentos/footer :: footer}"></div>  
+    
+</body>
+</html>

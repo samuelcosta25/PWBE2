@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Docente</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+    <link rel="stylesheet" th:href="@{/css/edit.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div th:insert="~{fragmentos/header :: header}"></div>
+    <div class="container">
+        <h1>Editar Docente</h1>
+        <form action="/atualizar-docente" method="post">
+            <input type="hidden" name="emailInstitucional" th:value="${emailInstitucional}">
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" th:value="${docente.nome}">
+            </div>
+            <div>
+                <label for="materia">Matéria:</label>
+                <input type="text" id="materia" name="materia" th:value="${docente.materia}">
+            </div>
+            <div>
+                <label for="turmas">Turma:</label>
+                <input type="text" id="turmas" name="turmas" th:value="${docente.turmas}">
+            </div>
+            <div>
+                <button type="submit">Salvar Alterações</button>
+            </div>
+        </form>
+        
+    </div>
+    <div th:insert="~{fragmentos/footer :: footer}"></div>  
+</body>
+</html>
