@@ -1,4 +1,22 @@
--Terminar acesso do Adm, pagina interna e controles de acesso que sera permitido pelo adm;
+-Terminar acesso do Adm, pagina interna e controles de acesso que sera permitido pelo adm; 
 -Interna adm, metodos;
 
 -Fazer todas as funcionalidades(MVC) do Aluno e professor.
+
+Descritivo de funcionalidades.
+ adm: 
+- acesso global 
+- consegue fazer cadastro de alunos(matricula) 
+- dados do aluno e disciplinas que ele vai fazer  
+- cadastro do professor (atribuir discplinas para o professor) 
+- filtros (listar alunos e docentes) 
+
+ aluno: 
+- acesso interno (area do aluno, user/pass)
+- ver informações das suas disciplinas - EM ANDAMENTO
+- ver as suas notas - EM ANDAMENTO
+
+ professor: 
+- acesso interno (area do professor, user/pass) 
+- lançar notas para os alunos 
+- listar alunos cadastrados em suas disciplinas 

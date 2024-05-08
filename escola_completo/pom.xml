@@ -8,13 +8,13 @@
 		<version>3.2.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>webapp</groupId>
-	<artifactId>escola_completo</artifactId>
+	<groupId>com.webapp</groupId>
+	<artifactId>escola_spring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>escola_completo</name>
+	<name>escola_spring</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>21</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 
